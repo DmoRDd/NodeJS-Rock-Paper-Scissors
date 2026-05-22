@@ -10,6 +10,12 @@ const server = http.createServer((req, res) => {
     fs.createReadStream("." + url.pathname).pipe(res);
     return;
   }
+  //image request
+  if (url.pathname.startsWith("/images/")) {
+    res.writeHead(200, {"Content-Type": "image/png"});
+    fs.createReadStream("." + url.pathname).pipe(res);
+    return;
+  }
   switch (url.pathname) {
     case "/":
       if (req.method == "GET") {
@@ -75,6 +81,6 @@ function coreLoop(req, res) {
     }
 
     res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end(`You selected ${choice}. ${message}`);
+    res.end(`${choice.charAt(0).toUpperCase() + choice.slice(1)} seçimini yaptın. ${message}`);
   });
 }

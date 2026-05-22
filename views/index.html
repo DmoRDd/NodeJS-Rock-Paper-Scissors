@@ -7,15 +7,15 @@
   <link rel="stylesheet" href="/views/styles/style.css">
 </head>
 <body>
-  <h1 id='titlen'>Welcome Stranger</h1>
-  <h2>Test your fate with a game of Rock-Paper-Scissors!</h2>
-  <div>
-    <button onclick='playGame("taş")'>Rock</button>
-    <button onclick='playGame("kağıt")'>Paper</button>
-    <button onclick='playGame("makas")'>Scissors</button>
+  <h1 id='title'>Taş-Kağıt-Makas</h1>
+  <h2 id="desc">Taş, kağıt ve makastan birini seç, kaderini test et!</h2>
+  <div id="buttons">
+    <button onclick='playGame("taş")'><img src="/images/rock.png" alt="rock"></button>
+    <button onclick='playGame("kağıt")'><img src="/images/new-document.png" alt="paper"></button>
+    <button onclick='playGame("makas")'><img src="/images/scissors.png" alt="scissors"></button>
+    
+    <p id='result' hidden></p>
   </div>
-
-  <p id='result' hidden></p>
 
   <script>
     const searchParams = new URLSearchParams(location.search);

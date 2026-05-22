@@ -1,5 +1,52 @@
+@import url('https://fonts.cdnfonts.com/css/ultra-911');
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    color: red;
+    color: black;
+    background-color: wheat;
+}
+#title{
+    font-weight: bold;
+    font-size: 46px;
+    letter-spacing: 2px;
+    margin: 20px 0px;
+}
+#desc{
+    margin: 20px 0px;
+}
+#buttons{
+    width: 95%;
+    padding: 60px 0px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px 1px black;
+    background-color: antiquewhite;
+    margin: 0 auto;
+}
+button{
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: bisque;
+    border: 3px solid black;
+    margin: 0px 10px;
+}
+button:hover{
+    background-color: rgb(255, 245, 234);
+}
+button:active{
+    background-color: rgb(193, 166, 133);
+}
+button img{
+    width: 100%;
+}
+#result{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
 }
